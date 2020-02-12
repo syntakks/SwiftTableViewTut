@@ -3,7 +3,7 @@
 //  Contacts
 //
 //  Created by Stephen Wall on 2/11/20.
-//  Copyright © 2020 Stephen Wall. All rights reserved.
+//  Copyright © 2020 syntaks.io. All rights reserved.
 //
 
 import UIKit
@@ -56,9 +56,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, UISplitViewControllerDe
     // MARK: - Split view
 
     func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController:UIViewController, onto primaryViewController:UIViewController) -> Bool {
+        
         guard let secondaryAsNavController = secondaryViewController as? UINavigationController else { return false }
-        guard let topAsDetailController = secondaryAsNavController.topViewController as? DetailViewController else { return false }
-        if topAsDetailController.detailItem == nil {
+        
+        guard let topAsDetailController = secondaryAsNavController.topViewController as? ContactDetailController else { return false }
+        
+        if topAsDetailController.contact == nil {
             // Return true to indicate that we have handled the collapse by doing nothing; the secondary controller will be discarded.
             return true
         }

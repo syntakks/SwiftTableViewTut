@@ -3,7 +3,7 @@
 //  Contacts
 //
 //  Created by Stephen Wall on 2/11/20.
-//  Copyright © 2020 Stephen Wall. All rights reserved.
+//  Copyright © 2020 syntaks.io. All rights reserved.
 //
 
 import UIKit
